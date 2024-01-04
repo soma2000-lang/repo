@@ -32,7 +32,21 @@
         "requires": {
             "auth": {
                 "[development]": {
-                    "strategy": "mock"
+                    "strategy": "mock",
+                    "users":{
+                        "":{
+                            "roles":[
+                                "authenticated-user",
+                                "scopeforcreatejob"
+                            ],
+                            "tenant":"t1"
+                        },
+                        "sfadmin":{
+                            "roles":["authenticated-user"],
+                            "tenant":"t2"
+                        }
+                        
+                    }
                 },
                 "ECEmploymentInformation": {
                     "kind": "odata-v2",
