@@ -1,0 +1,9 @@
+@port = 4004
+
+@server=http://localhost:{{port}}
+
+@rootservice= catalog
+
+GET {{server}}/odata/v4/{{rootservice}}/ECTime
+
+Content-Type: application/json

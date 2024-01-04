@@ -1,0 +1,41 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table
+                id="itemsTable"
+                items="{
+                    path: '/EmpJobUserManager'
+                }"
+            > 
+            <columns>
+                    <Column>
+                        <Text text="User ID" />
+                    </Column>
+                    <Column>
+                        <Text text="Department" />
+                    </Column>
+                    <Column>
+                        <Text text="Division" />
+                    </Column>
+                    <Column>
+                        <Text text="Job Title" />
+                    </Column>
+                    
+            </columns>
+                <items>
+                    <ColumnListItem  press="onItemPress"
+                            type="Navigation">
+                        <cells>
+                            <Text text="{userId}"/>
+                            <Text text="{department}"/>
+                            <Text text="{division}"/>
+                            <Text text="{jobTitle}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <VBox >
+            <Text text = "Click on the Row to see the leave Reports of the UserId's reporting to the Manager!"></Text></VBox>  
+        </Page>
+    </mvc:View>
