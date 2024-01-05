@@ -60,8 +60,8 @@
                             "url": "https://api68sales.successfactors",
                             "authentication": "BasicAuthentication",
                             "path": "odata/v2",
-                            "username": "sfadmin@SFCPART000914",
-                            "password": "#8uXr3j@H"
+                            "username": "",
+                            "password": ""
                         }
                     }
                 }
@@ -78,8 +78,8 @@
                         "url": "https://api68sales.successfactors",
                         "authentication": "BasicAuthentication",
                         "path": "odata/v2",
-                        "username": "sfadmin@SFCPART000914",
-                        "password": "#8uXr3j@H"
+                        "username": "",
+                        "password": ""
                     }
                 }
             }
