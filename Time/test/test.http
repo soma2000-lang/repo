@@ -4,6 +4,6 @@
 
 @rootservice= catalog
 
-GET {{server}}/odata/v4/{{rootservice}}/ECTime
+GET {{server}}/odata/v4/{{rootservice}}/EmployeeTime
 
 Content-Type: application/json

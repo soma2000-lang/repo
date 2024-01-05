@@ -30,14 +30,14 @@
     },
     "cds": {
         "requires": {
+            "db":"sql",
             "auth": {
                 "[development]": {
                     "strategy": "mock",
                     "users":{
-                        "":{
+                        "100135":{
                             "roles":[
-                                "authenticated-user",
-                                "scopeforcreatejob"
+                                "authenticated-user"
                             ],
                             "tenant":"t1"
                         },
