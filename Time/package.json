@@ -57,7 +57,7 @@
                             "path": "odata/v2"
                         },
                         "[development]": {
-                            "url": "https://api68sales.successfactors",
+                            "url": "",
                             "authentication": "BasicAuthentication",
                             "path": "odata/v2",
                             "username": "",
@@ -75,7 +75,7 @@
                         "path": "odata/v2"
                     },
                     "[development]": {
-                        "url": "https://api68sales.successfactors",
+                        "url": "",
                         "authentication": "BasicAuthentication",
                         "path": "odata/v2",
                         "username": "",
