@@ -4,7 +4,7 @@ using { ECTimeOff} from './external/ECTimeOff';
 
 service EmployeeService @(requires: 'authenticated-user' ) {
 
-    entity EmpJobUserManager @(restrict: [ { grant: '*', to: 'user', where: 'userId = $userId' }])
+    entity EmpJobUserManager @(restrict: [ { grant: '*', to: 'userId', where: 'userId = $userId' }])
     as projection on ECEmploymentInformation.EmpJob{userId} ;
 
 }
