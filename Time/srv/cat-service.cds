@@ -4,7 +4,7 @@ using { ECTimeOff} from './external/ECTimeOff';
 
 @cds.autoexpose
 service CatalogService {
-    @readonly entity EmpJob as projection on ECEmploymentInformation.EmpJob {*};
+  entity EmpJob as projection on ECEmploymentInformation.EmpJob {*};
     @readonly  entity EmployeeTime as projection on ECTimeOff.EmployeeTime { userId,startDate,endDate,timeType,externalCode};
 
 }

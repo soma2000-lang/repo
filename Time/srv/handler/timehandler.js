@@ -27,7 +27,7 @@ const getUsersECtime = async (req) => {
   return EmpInfo;
 }
 
-let info;
+
 const usersLeaveReport = async (req) => {                                      
   //await getUsersECtime(req);   
    const txecto = ECTimeOff.transaction(req);                                                       

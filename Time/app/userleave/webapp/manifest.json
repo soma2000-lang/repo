@@ -102,10 +102,8 @@
           "earlyRequests": true
         }
       
-    },
-    "leaveReportInfoModel" : {
-      "type" : "sap.ui.model.json.JSONModel"
-  }
+    }
+   
 },
     "resources": {
       "css": [

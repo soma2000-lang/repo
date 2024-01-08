@@ -6,6 +6,7 @@
     "license": "UNLICENSED",
     "private": true,
     "dependencies": {
+        "@sap-cloud-sdk/http-client": "^3.10.0",
         "@sap-cloud-sdk/resilience": "^3.9.0",
         "@sap/cds": "^7",
         "@sap/cds-hana": "^2",
@@ -33,7 +34,6 @@
     },
     "cds": {
         "requires": {
-            "db": "sql",
             "auth": {
                 "[development]": {
                     "strategy": "mock",
@@ -51,23 +51,6 @@
                             "tenant": "t2"
                         }
                     }
-                },
-                "ECEmploymentInformation": {
-                    "kind": "odata-v2",
-                    "model": "srv/external/ECEmploymentInformation",
-                    "credentials": {
-                        "[production]": {
-                            "destination": "extensionapplication-sf-api",
-                            "path": "odata/v2"
-                        },
-                        "[development]": {
-                            "url": "",
-                            "authentication": "BasicAuthentication",
-                            "path": "odata/v2",
-                            "username": "sfadmin@SFCPART00091",
-                            "password": "#8uXr3j@H"
-                        }
-                    }
                 }
             },
             "ECTimeOff": {
@@ -79,7 +62,24 @@
                         "path": "odata/v2"
                     },
                     "[development]": {
-                        "url": "",
+                        "url": "https://api68sales.successfactors.com",
+                        "authentication": "BasicAuthentication",
+                        "path": "odata/v2",
+                        "username": "sfadmin@SFCPART000914",
+                        "password": "#8uXr3j@H"
+                    }
+                }
+            },
+            "ECEmploymentInformation": {
+                "kind": "odata-v2",
+                "model": "srv/external/ECEmploymentInformation",
+                "credentials": {
+                    "[production]": {
+                        "destination": "extensionapplication-sf-api",
+                        "path": "odata/v2"
+                    },
+                    "[development]": {
+                        "url": "https://api68sales.successfactors.com",
                         "authentication": "BasicAuthentication",
                         "path": "odata/v2",
                         "username": "sfadmin@SFCPART000914",
