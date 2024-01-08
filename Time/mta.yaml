@@ -37,9 +37,23 @@ modules:
       - project1.zip
       name: project1
       target-path: resources/
+    - artifacts:
+      - userleave.zip
+      name: userleave
+      target-path: resources/
 - name: project1
   type: html5
   path: project1
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: userleave
+  type: html5
+  path: app/userleave
   build-parameters:
     build-result: dist
     builder: custom

@@ -1,0 +1,40 @@
+<mvc:View controllerName="userleave.controller.view2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+        xmlns="sap.m">
+        
+        <Page id="page" title="{i18n>title}">
+                <Table
+                    id="itemsTable"
+                    items="{
+                        path: '/EmployeeTime'
+                    }"
+                > 
+                <columns>
+                        <Column>
+                            <Text text="User ID" />
+                        </Column>
+                        <Column>
+                            <Text text="Leave type" />
+                        </Column>
+                        <Column>
+                            <Text text="Start Date" />
+                        </Column>
+                        <Column>
+                            <Text text="End Date" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem  press="onItemPress"
+                                type="Navigation">
+                            <cells>
+                                <Text text="{userId}"/>
+                                <Text text="{timeType}" />
+                                <Text text="{startDate}" />
+                                <Text text="{endDate}" />
+
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Page>
+    </mvc:View>

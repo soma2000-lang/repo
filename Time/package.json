@@ -20,32 +20,35 @@
     "devDependencies": {
         "@cap-js/sqlite": "^1",
         "@sap/cds-dk": "^7",
+        "@sap/ux-specification": "^1.120.1",
         "rimraf": "^3.0.2"
     },
     "scripts": {
         "start": "cds-serve",
         "undeploy": "cf undeploy Time --delete-services --delete-service-keys --delete-service-brokers",
         "build": "rimraf resources mta_archives && mbt build --mtar archive",
-        "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+        "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+        "watch-userleave": "cds watch --open userleave/webapp/index.html?sap-ui-xx-viewCache=false"
     },
     "cds": {
         "requires": {
-            "db":"sql",
+            "db": "sql",
             "auth": {
                 "[development]": {
                     "strategy": "mock",
-                    "users":{
-                        "100135":{
-                            "roles":[
+                    "users": {
+                        "100135": {
+                            "roles": [
                                 "authenticated-user"
                             ],
-                            "tenant":"t1"
+                            "tenant": "t1"
                         },
-                        "sfadmin":{
-                            "roles":["authenticated-user"],
-                            "tenant":"t2"
+                        "sfadmin": {
+                            "roles": [
+                                "authenticated-user"
+                            ],
+                            "tenant": "t2"
                         }
-                        
                     }
                 },
                 "ECEmploymentInformation": {
@@ -60,8 +63,8 @@
                             "url": "",
                             "authentication": "BasicAuthentication",
                             "path": "odata/v2",
-                            "username": "",
-                            "password": ""
+                            "username": "sfadmin@SFCPART00091",
+                            "password": "#8uXr3j@H"
                         }
                     }
                 }
@@ -78,8 +81,8 @@
                         "url": "",
                         "authentication": "BasicAuthentication",
                         "path": "odata/v2",
-                        "username": "",
-                        "password": ""
+                        "username": "sfadmin@SFCPART000914",
+                        "password": "#8uXr3j@H"
                     }
                 }
             }
