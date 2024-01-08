@@ -1,5 +1,7 @@
 
 const cds = require('@sap/cds');
+const log = require("cf-nodejs-logging-support");
+log.setLoggingLevel("info");;
 
 
 (async function () {
@@ -25,8 +27,10 @@ const getUsersECtime = async (req) => {
   return EmpInfo;
 }
 
+let info;
 const usersLeaveReport = async (req) => {                                      
-  //await getUsersECtime(req);                                                          
+  //await getUsersECtime(req);   
+   const txecto = ECTimeOff.transaction(req);                                                       
   //if (EmpInfo) {
    // const usersArray = EmpInfo.map(obj => obj.userId);                     
     //console.log(usersArray);
